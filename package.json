@@ -5,7 +5,7 @@
   "description": "Backend for Ionixx",
   "main": "dist/src/server.js",
   "scripts": {
-    "dev": "tsx src/server.ts",
+    "dev": "nodemon --watch src --ext ts --exec tsx src/server.ts",
     "build": "tsc --noEmitOnError",
     "start": "node dist/src/server.js",
     "test": "npm run build && node --test dist/tests/order-splitter.test.js",
@@ -24,6 +24,7 @@
     "@types/express": "^5.0.3",
     "@types/helmet": "^0.0.48",
     "@types/node": "^24.3.0",
+    "nodemon": "^3.1.14",
     "tsx": "^4.22.4",
     "typescript": "^5.9.2"
   }
