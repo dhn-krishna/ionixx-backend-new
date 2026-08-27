@@ -1,0 +1,30 @@
+{
+  "name": "ionixx-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Backend for Ionixx",
+  "main": "dist/src/server.js",
+  "scripts": {
+    "dev": "tsx src/server.ts",
+    "build": "tsc --noEmitOnError",
+    "start": "node dist/src/server.js",
+    "test": "npm run build && node --test dist/tests/order-splitter.test.js",
+    "typecheck": "tsc --noEmit"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "cors": "^2.8.6",
+    "express": "^5.2.1",
+    "helmet": "^8.3.0"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/helmet": "^0.0.48",
+    "@types/node": "^24.3.0",
+    "tsx": "^4.22.4",
+    "typescript": "^5.9.2"
+  }
+}
